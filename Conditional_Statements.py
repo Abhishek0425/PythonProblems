@@ -681,12 +681,106 @@ if s[3] % 2 == 0:
         print("Not Odd")
 else:
     print("Not Even")
+    
+# *=> OTHERS 
+
+# 1. Swap 2 numbers Code
+
+a=eval(input("Enter the value of a: "))
+b=eval(input("Enter the value of b: "))
+print(f'Before swap a:{a}, b:{b}')
+c=a
+a=b
+b=c
+print(f'After swap a:{a}, b:{b}')
+
+#                                    OR
+
+a=eval(input("Enter the value of a: "))
+b=eval(input("Enter the value of b: "))
+print(f'Before swap a:{a}, b:{b}')
+a=a+b
+b=a-b
+a=a-b
+print(f'After swap a:{a}, b:{b}')
+
+# 2.  Swap 3 numbers Code
+
+a=eval(input("enter the value of a: "))
+b=eval(input("enter the value of b: "))
+c=eval(input("enter the value of c: "))
+print(f"Before Swapping a:{a}, b:{b}, c:{c}")
+d=a
+a=c
+c=b
+b=d
+print(f"After Swaping a:{a}, b:{b}, c:{c}")
+
+#                                               OR
+
+a=eval(input("enter the value of a: "))
+b=eval(input("enter the value of b: "))
+c=eval(input("enter the value of c: "))
+print(f"Before Swapping a:{a}, b:{b}, c:{c}")
+a=a+b+c
+b=a-b-c
+c=a-b-c
+a=a-b-c
+print(f"After Swapping a:{a}, b:{b}, c:{c}")
+
+# 3. Sorting the given List
+
+l1=[2,1,7,4,56,3,11]
+print(l1)
+l1.sort()
+print(l1)
+
+a=34
+print(f'This is digit {a:05d}')
 
 
+# 4. Odd and Even number
 
+a=eval(input("enter the value: "))
+if a%2 == 0:
+    print(f'{a} is even number')
+else:
+    print(f'{a} is odd number')
+    
+# 5.WAP to check whether string is ANAGRAM or not (anagrams : characters should be same it can different meaning)
+# take user input?
 
+char1=eval(input("Enter the Character: "))
+char2=eval(input("Enter the Character: "))
+if sorted(char1)==sorted(char2):
+    print("Anagram")
+else:
+    print("Not Anagram")
 
+# 6. WAP to the given string is palindrone or not?(take user input)
 
+def palindrone():
+    str = eval(input("Enter the String: "))
+    if str==str[::-1]:
+        print("Yes, It is palidrone")
+    else:
+        print("No, It is not palidrone")
+palindrone()
+
+# 7. WAP to create list,tuple,set etc... by giving value?
+
+# Enter the value:[1,2,3,4,4]
+# output-> [1, 2, 3, 4, 4] <class 'list'>
+
+l=eval(input("Enter the value:"))
+print(l,type(l))
+
+# 8. WAP to remove the duplicate value from the given list
+# l=[10,30,20,20,10,40,30,50,60,40,60]?
+
+l=[10,30,20,20,10,40,30,50,60,40,60]
+l1=list(set(l))
+print(l1)
 
 
 
