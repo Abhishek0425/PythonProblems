@@ -155,7 +155,6 @@ class hello:
 
     def demo(self):
         print("What now")
-
 class hello1:
     def __init__(self):
         print("Yep")
@@ -166,7 +165,6 @@ class hello1:
         print("Good Enough")
 h=hello1()
 h.demo2()
-
 
 # *=> MRO[Method Resolution Order]
 
