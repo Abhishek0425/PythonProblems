@@ -772,8 +772,477 @@ while i<len(l):
         print("Numbers: ", l[i])
     i+=1
 
+# *=> OTHERS 
+
+# 1. WAP to print the count of alphabets and numbers and space in the given string
+
+# s="india got the independence in the year 1947"?
+
+s="india got the independence in the year 1947"
+count_alpha=0
+count_space=0
+count_digit=0
+for i in s:
+    if i.isalpha():
+        count_alpha+=1
+    elif i.isdigit():
+        count_digit+=1
+    else:
+        count_space+=1
+print("The alpha is ",count_alpha)
+print("The digit is ",count_digit)
+print("The space is ",count_space)
+
+# 2. WAP to print the count of vowels and consonent in the given string
+
+# s="india got the independence in the year 1947"?
+
+s="india got the independence in the year 1947"
+vowels="aeiouAEIOU"
+count_vowels=0
+count_consonent=0
+for i in s:
+    if i in vowels:
+        count_vowels+=1
+    else:
+        count_consonent+=1
+print("The vowels ",count_vowels)
+print("The consonent ",count_consonent)
+
+# 3. WAP to print series of factorial(take user input)?
+
+n=eval(input("enter the value:"))
+fact=1
+for i in range(1,n+1):
+    fact=fact*i
+print(fact)
+
+# 4. WAP to get below o/p:
+# s = 'Hi how are you'?
+
+# exp o/p : 'iH woh era uoy'
+
+s = 'Hi how are you'
+a=""
+for i in s.split():
+    i=i[::-1]
+    a+=i+''
+print(a)
+
+# 5. WAP to check the given number is armstrong or not (Armstrong : Sum of cube of the digits)
+# num=370?
+
+num=370
+a=str(num)
+b=len(a)
+res=0
+for i in a:
+    res=res+int(i)**3
+
+if res==num:
+    print("armstrong")
+
+else:
+    print('its not a armstrong')
+
+# 6. WAP to find the prime number ?
+
+a=eval(input("enter the value:"))
+for i in range(2,a//2+1):
+    if a%i==0:
+        print(a,"not a prime number")
+        break
+else:
+  print(a,"prime number")
+
+# 7. WAP to create a dictionary with letter and its words starting with that letter pair
+
+# s="hi hello good morning welcome to python session"?
+# o/p:-->{'h': ['hi', 'hello'], 'g': ['good'], 'm': ['morning'], 'w': ['welcome'], 't': ['to'], 'p': ['python'], 's': ['session']}
+
+s = "hi hello good morning welcome to python session"
+s1 =s.split()
+# print(s1)
+dict={}
+for i in s1:
+  f=i[0]
+  if f in dict:
+      dict[f].append(i)
+  else:
+     dict[f]=[i]
+print(dict)
+
+# 8. WAP to gave the n odd number?
+
+# 1 3 5 7 9
+
+n=eval(input("enter the value:"))
+for i in range(1,2*n+1):
+    if i%2!=0:
+        print(i,end=' ')
+
+                                              # OR
+
+n=eval(input("enter the value:"))
+for i in range(1,2*n+1,2):
+    print(i,end=' ')
+
+# 9. WAP to gave the n even number?
+
+# 2 4 6 8 10
+
+n=eval(input("enter the value:"))
+for i in range(2,2*n+1,2):
+    print(i, end=' ')
+
+                                             # OR
+
+n=eval(input("enter the value:"))
+for i in range(2,2*n+1):
+    if i%2==0:
+        print(i,end=' ')
+
+# 10. WAP to find the sum of 1 to n?
+
+# Enter the value:5
+# output -> 15
+
+n=eval(input("Enter the value:"))
+s=0
+for i in range(1,n+1):
+    s+=i
+print(s)
+
+# 11. WAP to find the sum of even number between 1 to n?
+
+# Enter the value:10
+# output -> 30
+
+n=eval(input("Enter the value:"))
+s=0
+for i in range(1,n+1):
+    if i%2==0:
+        s+=i
+print(s)
+
+# 12. WAP to find the sum of odd number between 1 to n?
+
+# Enter the value:10
+# output -> 25
+
+n=eval(input("Enter the value:"))
+s=0
+for i in range(1,n+1):
+    if i%2!=0:
+        s+=i
+print(s)
+
+# 13. WAP to find the factorial of n numbers?
+
+# enter the value:5
+# output -> 120
+
+n=eval(input("enter the value:"))
+fact=1
+for i in range(1,n+1):
+    fact=fact*i
+print(fact)
+
+# 14. WAP to find the number is prime or not?
+
+# Enter the value:7
+# output -> Number is a prime
+
+n=eval(input("Enter the value:"))
+for i in range(2,n//2+1):
+    if n % i==0:
+        print("Number is not a prime")
+        break
+else:
+   print("Number is a prime")
+
+# 15. WAP to find factor displaying of n number?
+
+# Enter the value:6
+# output->1
+#         2
+#         3
+#         6
+
+n=eval(input("Enter the value:"))
+for i in range(1,n+1):
+    if n%i==0:
+        print(i)
+
+# 16. WAP to find factor displaying of n number and count the number of factor?
+
+# enter the value: 6
+# output -> Count of factors: 4
+
+n=eval(input("enter the value: "))
+count=0
+for i in range(1,n+1):
+    if n%i==0:
+        count += 1
+print("Count of factors:",count)
+
+# 17. WAP to find the length of the number?
+
+# Enter the value:-123
+# output -> 3
+
+n=abs(eval(input("Enter the value:")))
+print(len(str(n)))
+
+                                                    # OR
+
+n=abs(eval(input("Enter the value:")))
+c = 0
+while n!=0: # also n>0
+    c+=1
+    n//=10 #removing last digit
+print(c)
+
+# 18. WAP to reverse the given number?
+
+# Enter the value:123
+# output -> 321
+
+n=eval(input("Enter the value:"))
+print(str(n)[::-1])
+
+                                                    # OR
+
+n=eval(input("Enter the value:"))
+res=0
+while n!=0: #also n>0
+    reminder = n%10
+    res = res*10+reminder
+    n//=10 #removing last digit
+print(res)
+
+# 19. WAP to check if the number is palindrone or not?
+
+# Enter the value:121
+# output -> 121 is the palindrone
+
+n=eval(input("Enter the value:"))
+temp=n
+res=0
+while n!=0: #also n>0
+    reminder=n%10
+    res = res*10+reminder
+    n//=10 #removing last digit
+if temp == res:
+    print(f"{temp} is the palindrone")
+else:
+    print(f"{temp} is not palindrone")
+
+# 20. WAP to count the zero, odd and even from the given number?
+
+# Enter the value:10004422
+# output -> Zero is 3
+#           Odd is 1
+#           Even is 4
+
+n=eval(input("Enter the value:"))
+zero=0
+odd=0
+even=0
+while n!=0:  # also n>0
+    rem=n % 10
+    if rem == 0:
+        zero+=1
+    elif rem % 2!=0:
+        odd+=1
+    else:
+        even+=1
+    n//=10 # removing the last digit
+print("Zero is",zero)
+print("Odd is",odd)
+print("Even is",even)
+
+                                                    # OR
+
+n=eval(input("Enter the value:"))
+zero=0
+odd=0
+even=0
+for i in str(n):
+    if int(i) == 0:
+        zero+=1
+    elif int(i) % 2==1:
+        odd+=1
+    else:
+        even+=1
+print("Zero is",zero)
+print("Odd is",odd)
+print("Even is",even)
 
 
+# 21. WAP to calculate the sum of odd and even number?
+
+# Enter the value:11112222
+# output -> Odd sum is 4
+#           Even sum is 8
+
+n=eval(input("Enter the value:"))
+odd_sum=0
+even_sum=0
+for i in str(n):
+    if int(i) % 2==0:
+        even_sum+=int(i)
+    else:
+        odd_sum+=int(i)
+print("Odd sum is",odd_sum)
+print("Even sum is",even_sum)
+
+                                                         # OR
+
+n=eval(input("Enter the value:"))
+odd_sum=0
+even_sum=0
+while n!=0: #also n>0
+    rem=n%10
+    if rem % 2==0:
+        even_sum+=rem
+    else:
+        odd_sum+=rem
+    n//=10 #removing last digit
+print("Odd sum is",odd_sum)
+print("Even sum is",even_sum)
+
+# 22. WAP to find the maximum and minimum digit from the given number?
+
+# Enter the value:89783
+# output -> Minimum is 3
+#           Maximum is 9
+
+n=eval(input("Enter the value:"))
+max=0
+min=9
+while n!=0: #also n>0
+    rem=n%10
+    if rem > max:
+        max=rem
+    if rem < min:
+        min=rem
+    n//=10 #removing the last digit
+print("Minimum is",min)
+print("Maximum is",max)
+
+
+                                                           # OR
+
+n=eval(input("enter the value:"))
+max=0
+min=9
+for i in str(n):
+    if int(i) > max:
+        max=int(i)
+    if int(i) < min:
+        min=int(i)
+print("Minimum is",min)
+print("Maximum is",max)
+
+
+# 23. WAP to print the list by giving the intput value?
+
+# Enter the value:5
+# val: 1
+# val: 2
+# val: 3
+# val: 4
+# val: 5
+# output-> [1, 2, 3, 4, 5]
+
+l = []
+n=eval(input("Enter the value:"))
+for i in range(n):
+    l.append(int(input("val: ")))
+print(l)
+
+# 24. WAP the fibonacci series by giving input?
+
+# Enter the value:8
+# output-> 0 1 1 2 3 5 8 13
+
+n=eval(input("Enter the value:"))
+a=0
+b=1
+i=0
+for i in range(n):
+    print(a,end=' ')
+    c=a+b
+    a=b
+    b=c
+
+                                                               # OR
+
+n=eval(input("Enter the value:"))
+a=0
+b=1
+i=0
+while i!=n: #also i<n
+    print(a, end=' ')
+    c=a+b
+    a=b
+    b=c
+    i+=1
+
+
+# 25. WAP to find that given number is strong or not by giving input?
+
+# Enter the value:145
+# output-> 145 is a strong number
+
+n=eval(input("Enter the value:"))
+sum=0
+temp=n
+while n>0:
+    rem=n%10
+    #factorial
+    fact=1
+    for i in range(1,rem+1):
+        fact=fact*i
+    sum+=fact
+    n//=10 #removing last digit
+if temp==sum:
+    print(f"{temp} is a strong number")
+else:
+    print(f"{temp} is not a strong number")
+
+
+# 26. WAP to print strong number between 1 to 1000?
+
+# output-> 1 2 145
+
+for n in range(1,1001):
+    sum=0
+    temp=n
+    while n>0:
+        rem=n%10
+        fact=1
+        for i in range(1,rem+1):
+            fact=fact*i
+        sum+=fact
+        n//=10
+    if temp==sum:
+        print(temp,end=' ')
+
+# 27. WAP to find the maximum number from the given list
+# l1=[10,20,30,50,40,200,500,700]?
+
+# output-> The maximum number is: 700
+
+l1=[10,20,30,50,40,200,500,700,'hello','good','hey','hep']
+# print(max(l1))
+max=0
+for i in l1:
+    if isinstance(i,(int,float)):
+        if max < i:
+            max = i
+print("The maximum number is:",max)
 
 
 
