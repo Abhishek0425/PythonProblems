@@ -200,8 +200,6 @@ if x % 2 == 0:
 else:
     print("a+1")
 
-
-
  # 2. WAP to check given number ie palidrone or not where a=121?
 
 a=121
@@ -455,3 +453,256 @@ if int(str(a)[0]) % 2 == 0:
     print("Yes, It is Even")
 else:
     print("Yes, It is odd")
+
+# *=> ELIF 
+
+# 1. WAP to check given number is positive, negative or neutral[take user input]?
+
+num = eval(input("Enter the Number: "))
+if num > 0:
+    print("Positive")
+elif num == 0:
+    print("Neutral")
+elif num < 0:
+    print("Negative")
+else:
+    print("Invalid Number")
+
+# 2. WAP to check a data is a sequence/individual/iterable datatype[take user input]?
+
+data = eval(input("Enter the Data: "))
+if isinstance(data, (list, tuple, str)):
+    print("Data is Sequence")
+elif isinstance(data, (complex, int, float, bool)):
+    print("Data is Individual")
+elif isinstance(data, (set, dict)):
+    print("Data is Iterable")
+else:
+    print("Data is invalid")
+
+#  3. WAP if input is string returns its length, else if input is list pop element, else if input is tuple reverse else invalid input[take user input]?
+
+num = eval(input("Enter the Value: "))
+if isinstance(num, (str)):
+    num = len(num)
+    print("length is: ", num)
+elif isinstance(num, (list)):
+    num = num.pop()
+    print("Pop Value is: ", num)
+elif isinstance(num, (tuple)):
+    num = num[::-1]
+    print("Reverse Value is: ", num)
+else:
+    print("Invalid Data")
+
+# 4. WAP to check a age belong to category 0 to 17 child and 18 to 30 ur adult, 31 to 60 ur men, 61 to 100 ur senior citizen , else invalid[take user input]?
+
+age = eval(input("Enter the Age: "))
+if 0 <= age <= 17:
+    print("You are Child")
+elif 18 <= age <= 30:
+    print("You are Adult")
+elif 31 <= age <= 60:
+    print("You are Men")
+elif 61 <= age <= 100:
+    print("You are Senior")
+else:
+    print("Invalid Data")
+
+#  5. WAP to give hike to an employee based on his experience, u should ask employee date of joining exp 0 to 2 years no hike and 3 to 5 years 5000rs hike, and 6 to 8 years 7000rs and 0 to n years 10000rs[take user input]?
+
+join_date = eval(input("Enter the Value: "))
+exp = 2024 - join_date
+if 0 <= exp <= 2:
+    print("No Hike")
+elif 3 <= exp <= 5:
+    print("5000RS Hike")
+elif 6 <= exp <= 8:
+    print("7000RS Hike")
+else:
+    print("10000RS Hike")
+
+#  6. WAP to check which number is smallest value among 3 numbers a = 65, b = 34, c = 76[take user input]?
+
+a = 65
+b = 34
+c = 76
+if c < b and c < a:
+    print("a is greater")
+elif a < b:
+    print("a is greater")
+else:
+    print("b is small")
+
+# 7.wap to take marks of 5 sub,calculate the average if the average is b/w 90-100 print Distinction
+# if 75-89 print firstclass and if its 60-74 print second class, if 50-59 print Third class,below 50 is fail
+#
+# note:-->max marks is 100?
+
+sub_1 = eval(input("Enter the Marks: "))
+sub_2 = eval(input("Enter the Marks: "))
+sub_3 = eval(input("Enter the Marks: "))
+sub_4 = eval(input("Enter the Marks: "))
+sub_5 = eval(input("Enter the Marks: "))
+sum = sub_1+sub_2+sub_3+sub_4+sub_5
+avg = sum/5
+if 90 <= avg <= 100:
+    print("Distinction")
+elif 75 <= avg <= 89:
+    print("First class")
+elif 60 <= avg <= 74:
+    print("second class")
+elif 50 <= avg <= 59:
+    print("Third class")
+else:
+    print("Fail")
+
+
+# 8.wap to check the char is uppercase or lowercase or digit or special symbol by taking user input without useing inbuilt function.?
+
+char = eval(input("Enter the Char: "))
+if char.isupper():
+    print("Uppercase")
+elif char.islower():
+    print("Lowercase")
+elif char.isdigit():
+    print("Digit")
+else:
+    print("Special")
+
+                     # OR
+
+char = eval(input("Enter the Char: "))
+if ord("A") <= ord(char) <= ord("Z"):
+    print("Uppercase")
+elif ord("a") <= ord(char) <= ord("z"):
+    print("Lowercase")
+elif ord("0") <= ord(char) <= ord("9"):
+    print("Digit")
+else:
+    print("Special")
+
+# *=> NESTED IF-ELSE 
+
+# 1. WAP to check whether the given number is even and greater than 5
+# num=2[take input value]?
+
+num = eval(input("Enter the Number: "))
+if num % 2 == 0:
+    print("Even")
+    if num > 5:
+       print("Greater then 5")
+    else:
+       print("Not Greater")
+else:
+    print("Not Even and NOt Greater")
+
+# 2. WAP to check the number is odd and check if the number is divisible by 7
+# n=35[take input value]?
+
+num = eval(input("Enter the Number: "))
+if num % 2 == 1:
+    print("Number is Odd")
+    if num % 7 == 0:
+        print("Divisible by 7")
+    else:
+        print("Not Divisible by 7")
+else:
+    print("Number is not odd")
+
+# 3.WAP to check the number is odd and check if the number is divisible by 7
+# n=33[take input value]?
+
+num = eval(input("Enter the Value: "))
+
+if num % 2 == 1:
+    print("Number is odd")
+    if num % 7 == 0:
+        print("Number is divisible by 7")
+    else:
+        print("Number is not divisible by 7")
+else:
+    print("Number is not odd")
+
+# 4.WAP to validate facebook username and password
+# condition is:---> username-->"python"  and password="pythonmasters"[take input value]?
+
+username = eval(input("Enter the value: "))
+password = eval(input("Enter the password: "))
+if username == "python":
+    print("Valid username")
+    if password == "pythonmasters":
+        print("valid password")
+    else:
+        print("invalid password")
+else:
+    print("invalid username")
+
+
+# 5.WAP to Book ticket in Book my show
+#
+# condition:---> first it should ask theaters name then it should display the movie available
+#                           then it has to display ticket price and in the end ticket should be booked?
+
+theaters_name = ["maxx", "miraj", "pvr", "tdi"]
+movie_name = ["kabir singh", "animal", "puspha", "cocktail"]
+movie_price = [500, 600, 700, 800, 900, 1000]
+
+theater = eval(input("Enter the Theater Name: "))
+movie = eval(input("Enter the Movie Name: "))
+price = eval(input("Enter the Price: "))
+
+if theater in theaters_name:
+    print("Theater Available is ", theaters_name)
+    if movie in movie_name:
+        print("Movie Available", movie_name)
+        if price in movie_price:
+            print("Movie Price is ", movie_price)
+            if theater in theaters_name and movie in movie_name and price in movie_price:
+                print("Ticket Booked")
+            else:
+                print("Ticket Not Booked")
+        else:
+            print("Movie Price Not Available")
+    else:
+        print("Movie Not Available")
+else:
+    print("Theater Not Available")
+
+# 6.WAP to find middle element is even or odd
+# s=[3,4,6,7,9,1,5] ?
+
+s = [3, 4, 6, 7, 9, 1, 5]
+if s[3] % 2 == 0:
+    print("Number is Even")
+    if s[3] % 2 == 1:
+        print("Number is Odd")
+    else:
+        print("Not Odd")
+else:
+    print("Not Even")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
