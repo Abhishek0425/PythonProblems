@@ -489,7 +489,6 @@ a = eval(input("a: "))
 b = eval(input("b: "))
 print("The LCM is:",findlcm(a,b))
 
-
 # -> QUEUE - [First In First Out]
 #
 # OPERATIONS:
