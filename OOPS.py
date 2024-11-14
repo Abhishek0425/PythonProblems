@@ -72,7 +72,6 @@ print(t1)
 print(id(test))
 print(id(t1))
 
-
 # *=> METHODE 
 
 # 1. INSTANCE METHODE
@@ -297,7 +296,6 @@ print(t.demo(3,4))
 t.a=100
 t.b=300#[modification does not effects]
 
-
 # *=> CONSTRUCTOR 
 
 class shop:
@@ -306,7 +304,6 @@ class shop:
 s=shop()
 s.__init__()
 shop.__init__(s)
-
 
 # 1. PRE-DEFINED CONSTRUCTOR
 
@@ -395,7 +392,6 @@ s.enjoy()
 print(dir(father))
 print(dir(son))
 
-
 # 2. MULTI-LEVEL INHERITANCE
 
 class grandfather:
@@ -458,7 +454,6 @@ d=daughter()
 d.done()
 d.enjoy()
 
-
 # 5. HYBRID INHERITANCE[Doubt]
 
 class grandfather:
@@ -484,7 +479,6 @@ class daughter(dad):
 class son2(dad):
     def responsible(self):
         print("Always take responsibilities")
-
 
 # METHODE OVERRIDING
 
