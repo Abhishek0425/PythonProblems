@@ -446,6 +446,291 @@ print(list(sample()))
 
 # *=> OTHERS 
 
+# 1. WAP python function to find the GCD of 2 numbers or HCF of two numbers
+
+# example:
+# a = 4
+# b = 10
+# output = 2
+
+# So basically HCF or GCD is the highest common divisor of the numbers in this case it is 2
+# i.e. 4/2 and 10/2 ?
+
+def findhcf(a,b):
+    if a>b:
+        smaller = b
+    else:
+        smaller = a
+    for i in range(1,smaller+1):
+        if a%i==0 and b%i==0:
+            hcf = i
+    return hcf
+a = eval(input("a: "))
+b = eval(input("b: "))
+print("The HCF is:",findhcf(a,b))
+
+# 2. WAP to find the lcm of two given numbers
+# example
+# a = 2
+# b = 8
+# output = 8 ?
+
+def findlcm(a,b):
+    if a>b:
+        greater = a
+    else:
+        greater = b
+    for i in range(greater,(a*b)+1):
+        if i%a == 0 and i%b == 0:
+            lcm = i
+            return lcm
+
+a = eval(input("a: "))
+b = eval(input("b: "))
+print("The LCM is:",findlcm(a,b))
+
+
+# -> QUEUE - [First In First Out]
+#
+# OPERATIONS:
+# ENQUEUE - insertion - Rear End
+# DEQUEUE - deletion - Front End
+
+# 3. WAP to implement the Queue operations on list?
+
+def enqueue():
+    n=eval(input("Enter the elemets to inserted into Queue:"))
+    queue.append(n)
+    print()
+
+def dequeue():
+    if len(queue)==0:
+        print('QUERY IS EMPTY')
+        print()
+    else:
+        print(queue[0],"is the elements deleted from the Queue")
+        del queue[0]
+        print()
+
+def display():
+    if len(queue)==0:
+        print("QUERY IS EMPTY")
+    else:
+        print("ELEMENTS OF THE QUEUE ARE")
+        for ele in queue:
+            print(ele,end=' ')
+        print("\nFront of the Queue is",queue[0])
+        print("Rear of the Queue is",queue[-1])
+
+queue = list()
+while(1):
+    print("Enter the option from below: \n1-Enqueue Operation\n2-Dequeue Operation\n3-Display\n4-Exit")
+    option=eval(input())
+    if option==1:
+        print('ENQUEUE OPERTIONS')
+        enqueue()
+    elif option==2:
+        print("DEQUEUE OPERTIONS")
+        dequeue()
+    elif option==3:
+        print("DISPLAY")
+        display()
+    elif option==4:
+        break
+    else:
+        print("Invalid Input")
+
+# -> STACK-[Last In First Out]
+
+# OPERATIONS:
+# PUSH - insertion -> Done At Top
+# POP - deletion -> Done At Top
+
+# 4. WAP to implement the stack operations on lists ?
+
+def push():
+    n=eval(input("Enter the Element Inserted into the Stack:"))
+    if len(stack)==0:
+        stack.append(n)
+    else:
+        stack.insert(0,n)
+    print(n,'is the Element Inserted into the Stack')
+
+def pop():
+    if len(stack)==0:
+        print('STACK IS EMPTY')
+    else:
+        print(stack[0],'is the Element Deleted from the Stack')
+        del stack[0] #pop(0)
+
+def display():
+    if len(stack)==0:
+        print('STACK IS EMPTY')
+    else:
+        print('Element of the Stack Are:')
+        for ele in stack:
+            print(ele)
+        print("Top Element of the Stack is:", stack[0])
+
+stack=list()
+while(1):
+    print("Enter the options from the Below: \n1-PUSH OPERATION\n2-POP OPERTAIONS\n3-DISPLAY OPERTAIOON\nEnter any Key to Exit")
+    str=input()
+    if str=='1':
+        print('PUSH OPERATIONS')
+        push()
+    elif str=='2':
+        print('POP OPERATIONS')
+        pop()
+    elif str=='3':
+        print('DISPLAY OPERATIONS')
+        display()
+    else:
+        print('EXIT FROM PROGRAM')
+        break
+
+# 5.WAP this program returns true if any one of the element in two lists is common ?
+
+def check_num(list1,list2):
+    final = False
+    for i in list1:
+        for j in list2:
+            if i == j:
+                final = True
+                return final
+
+print(check_num([1,2,3,4,5],[5,6,7,8,9]))
+
+# 6. WAP python program to find sum of digits of a number in a list
+# example:
+# in = [12,23,43,66]
+# ot = [3,5,7,12]  ?
+
+def lis(st):
+    l1 = st.split()
+    l2 = []
+    for i in l1:
+        l2+=[int(i)]
+    return l2
+
+def sum_dig(l1):
+    l2 = []
+    for i in l1:
+        sum=0
+        for j in str(i):
+            sum+=int(j)
+        l2.append(sum)
+    return l2
+
+l1 = eval(input("Enter the Number:"))
+print(sum_dig(l1))
+
+
+# 7. WAP python function to find the factorial of a given number
+# example:
+# a = 4
+# factorial = 24  ?
+
+def fact(n):
+    fact = 1
+    for i in range(1,n+1):
+        fact = fact*i
+    return fact
+
+n = eval(input("Enter the Number:"))
+print(fact(n))
+
+# 8. WAP Python function to print the N fibonacci series
+# example:
+# n = 10
+# 0 1 1 2 3 5 8 13 21 34 ?
+
+def fibonacci(n):
+    a = 0
+    b = 1
+    i = 0
+    for i in range(n):
+        print(a,end=' ')
+        c = a+b
+        a = b
+        b = c
+
+n = eval(input("Enter the Number:"))
+fibonacci(n)
+
+# 9. WAP Python program to interchange the first and the last element of the list ?
+
+def lis(str):
+    l1 = str.split()
+    l2 = []
+    for i in l1:
+        l2+=[int(i)]
+    return l2
+def swap(l1):
+   l1[0], l1[-1] = l1[-1],l1[0]
+   return l1
+
+l1 = eval(input("Enter the Value:"))
+print(swap(l1))
+
+# 10. WAP Python function to check whether the given number is perfect or not ?
+
+# if the sum of the factors of the number is equal to the number then the number is perfect number
+
+# Example : n = 6
+# Finding Factors
+# 6%1 = 0, 6%2 = 0, 6%3 = 0, 6%4 = 2, 6%5 = 1
+# Factors of 6 = 1,2,3
+# Sum of factors = 1+2+3 = 6(Given Number)
+# So, 6 is the Perfect Number
+
+def perfect(n):
+    sum = 0
+    for i in range(1,n):
+        if n%i==0:
+            print(i,end = ' ')
+            sum+=i
+    if sum == n:
+        print("\n",n,"is the Perfect Number")
+    else:
+        print("\n",n,"is not the Perfect Number")
+
+n = eval(input("Enter the Number:"))
+perfect(n)
+
+# 11. WAP python function to remove the nth index from the given string and return a new string ?
+
+def str_remove(str,n):
+    last_str = str[:n-1] + str[n:]
+    return last_str
+
+str = input("Enter the Element to the String:")
+n = eval(input("Enter the index of the Element that You want to Remove:"))
+print(str_remove(str,n))
+
+# 12. WAP to convert a given string into a list without using any inbuilt function ?
+# example 1:
+# st = python programmin language
+# output = ['python','programmin','language']
+
+# example 2:
+# st = 1 2 3 4 5 6
+# output = [1,2,3,4,5,6]
+
+def tolist(n):
+    l = []
+    temp = " "
+    for i in n:
+        if i==" ":
+            l.append(temp)
+            temp=" "
+        else:
+            temp=temp+i
+    l.append(temp)
+    return l
+
+n = eval(input("Enter the Value:"))
+print(tolist(n))
 
 
 
