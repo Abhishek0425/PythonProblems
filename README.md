@@ -6,7 +6,7 @@
 This repository, Python Problem, contains solutions to various Python problems. It demonstrates the use of conditional statements, functions, object-oriented programming (OOP), and pattern programming and aims to showcase practical applications of these fundamental programming concepts in Python.
 <br>
 <h3>Topics Covered</h3>
-<b>Each solution highlights different programming concepts, including:</b>
+Each solution highlights different programming concepts, including:
 <br>
 <h3>Conditional Statements:</h3> Using if, Elif, and else statements to make logical decisions.
 <br>
@@ -16,7 +16,7 @@ This repository, Python Problem, contains solutions to various Python problems. 
 <br>
 <h3>Pattern Programming:</h3> Generating various patterns, often with loops, to illustrate logic and control flow.
 <br>
-<h3>Examples of Problems Solved</h3>
+<h2>Examples of Problems Solved</h2>
 <h3>Conditional Statements:</h3>
 Age-based access control, calculating discounts, etc.
 <br>
@@ -31,5 +31,6 @@ Generating star, number, and alphabet patterns using nested loops.
 <br>
 <h3>Contributions</h3>
 Contributions are welcome! If you have more problems or enhancements, feel free to fork the repository, make changes, and submit a pull request.
+<br>
 <br>
 For any questions or suggestions, don't hesitate to contact [sharmaabhishek2859@gmail.com].
