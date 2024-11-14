@@ -601,6 +601,207 @@ for i in s:
         continue
     print(i,end=' ')
 
+# *=> WHILE LOOP 
+
+# 1. WAP to print series of 20 natural number?
+
+i = 1
+while i <= 20:
+    print(i, end=' ')
+    i = i + 1
+
+# 2. WAP to print series of Upper Case characters?
+
+char = ord("A")
+while char <= ord("Z"):
+    print(chr(char), end=' ')
+    char = char + 1
+
+# 3. WAP to print series of Lower Case characters?
+
+char = ord("a")
+while char <= ord("z"):
+    print(chr(char), end=' ')
+    char = char + 1
+
+# 4. WAP to print both uppercase and lowercase character?
+
+char = ord("A")
+char_1 = ord("a")
+while char <= ord("Z") and char_1 <= ord("z"):
+         print(chr(char_1), chr(char), end=' ')
+         char_1 = char_1 + 1
+         char = char + 1
+
+
+# 5. WAP to print series of even numbers till 20 in reverse order?
+
+num = 20
+while num >= 1:
+       print(num, end=' ')
+       num = num - 2
+
+# 6. WAP to count number of occurance of specified elements in the collections
+#  s = 'Hello guys Good morning python is a programming language'?
+
+s = 'Hello guys Good morning python is a programming language'
+char = eval(input("Enter the Char: "))
+i = 0
+count = 0
+while i < len(s):
+    if char == s[i]:
+        count=count+1
+    i=i+1
+print(f'The Specified elements is {char} and counts is {count}')
+
+# 7. WAP to print even postional characters in the given string, s="hello world"?
+
+s="hello world"
+i = 0
+while i < len(s):
+    print(s[i], end=' ')
+    i=i+2
+
+# 8. WAP to print two different list and print even and odd numbers from 1-20?
+
+even=[]
+odd=[]
+i=0
+while i<=20:
+    if i%2==0:
+        even.append(i)
+    else:
+        odd.append(i)
+    i=i+1
+print(f"The Even Number is {even}")
+print(f"The Even Number is {odd}")
+
+ # 9.WAP to display the postion of the substring?
+
+str = eval(input("Enter the Character: "))
+substr = eval(input("Enter the String: "))
+i = 0
+while i<len(str):
+    if substr in str[i]:
+        print(i)
+    i=i+1
+
+# 10. WAP to print the number Table by using data given by user (take user input)?
+
+num = eval(input("Enter the number: "))
+i=0
+while i<=10:
+    print(f"{i}x{num}={i*num}")
+    i=i+1
+
+# 11. WAP to print the names only if the length of the names is even
+# l=["vaidegi","ashwini","patil","srinidhi","susmitha","rahul","priyanka","usha"]?
+
+l=["vaidegi","ashwini","patil","srinidhi","susmitha","rahul","priyanka","usha"]
+i=0
+while i<len(l):
+    if len(l[i]) % 2 == 0:
+        print(l[i])
+    i=i+1
+
+# 12. WAP to print the elements which in tuple,print only the if it is collection data types
+# values=(10,2.5,[10,20],"hero",True,(3,4,5),{2,7},{90:"super"})?
+
+values=(10,2.5,[10,20],"hero",True,(3,4,5),{2,7},{90:"super"})
+i=0
+while i < len(values):
+    if isinstance(values[i], (list, set, dict, tuple)):
+        print(values[i])
+    i=i+1
+
+# 13. WAP to print the name which is starting with vowel in the given list
+# names=["agra","bangalore","mumbai","pune","indore","isha","eshwar","surat"]?
+
+names = ["agra", "bangalore", "mumbai", "pune", "indore", "isha", "eshwar", "surat"]
+vowels = ["a", "i", "e", "o", "u"]
+i = 0
+while i<len(names):
+    if names[i][0].lower() in vowels:
+        print(names[i])
+    i+=1
+
+# 14. WAP to print sum of numbers in the list
+# l=[2,4,6,7,8,9]?
+
+l=[2,4,6,7,8,9]
+i = 0
+while i < len(l):
+    print(sum(l))
+    i+=1
+
+# 15. WAP to extract only vowels and digits from the given string
+# s="hellopython123"?
+
+s="hellopython123"
+c = ["a", "i", "e", "o", "u"]
+i=0
+while i<len(s):
+    if s[i].isdigit() or s[i] in c:
+        print(s[i])
+    i+=1
+
+# 16. WAP to iterate inside the list check if it is having nested list if yes merge it
+#
+# list1=["hello",10,20.55,True,False,"hai","bye",[False,"goodnight","enjoy the holiday"]]?
+
+#excepted output:-->list1=["hello",10,20.55,True,False,"hai","bye",False,"goodnight","enjoy the holiday"]
+
+list1=["hello",10,20.55,True,False,"hai","bye",[False,"goodnight","enjoy the holiday"]]
+i=0
+while i<len(list1):
+    if isinstance(list1[i],(list)):
+        nested_list = list1.pop(i)
+        list1.extend(nested_list)
+    else:
+        i+=1
+print("Merge List", list1)
+
+# 17. WAP to print a number which are divisible by 5 from a list
+#
+# l=[63,20,67,55,85,31]?
+
+l=[63,20,67,55,85,31]
+i=0
+while i<len(l):
+    if l[i] % 5 == 0:
+        print("Numbers: ", l[i])
+    i+=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
