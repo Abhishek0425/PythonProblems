@@ -17,7 +17,6 @@ This repository, Python Problem, contains solutions to various Python problems. 
 <h3>Pattern Programming:</h3> Generating various patterns, often with loops, to illustrate logic and control flow.
 <br>
 <h3>Examples of Problems Solved</h3>
-<br>
 <h3>Conditional Statements:</h3>
 Age-based access control, calculating discounts, etc.
 <br>
