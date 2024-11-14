@@ -1,6 +1,4 @@
-# PythonProblems
-
-<h1>Python Problem</h1>
+<h1>Python Problems</h1>
 <br>
 <h2>Overview</h2>
 This repository, Python Problem, contains solutions to various Python problems. It demonstrates the use of conditional statements, functions, object-oriented programming (OOP), and pattern programming and aims to showcase practical applications of these fundamental programming concepts in Python.
