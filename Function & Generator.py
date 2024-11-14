@@ -199,6 +199,267 @@ def leapyear(year):
 year = eval(input("Enter the Year:"))
 leapyear(year)
 
+# *=> GENERATOR 
+
+# 1. wagf to generate a+b,a-b,a*b,a/b by taking a and b from user?
+
+a=eval(input("Enter the Value: "))
+b=eval(input("Enter the Value: "))
+def value(a,b):
+    l1=a+b
+    l2=a-b
+    l3=a*b
+    l4=a/b
+    return l1,l2,l3,l4
+print(value(a,b))
+
+                                               # OR
+
+a=eval(input("Enter the Value: "))
+b=eval(input("Enter the Value: "))
+def value(a,b):
+    yield a+b
+    yield a-b
+    yield a*b
+    yield a/b
+print(list(value(a,b)))
+
+# 2. wagf to generate only values which are divisible by 5
+# l=[34,55,60,56,78,90,25,40]?
+
+l=[34,55,60,56,78,90,25,40]
+def value(l):
+    for i in l:
+        if i%5==0:
+            print(i)
+value(l)
+
+                                                    # OR
+
+l=[34,55,60,56,78,90,25,40]
+def value(l):
+    for i in l:
+        if i%5==0:
+            yield i
+print(list(value(l)))
+
+# 3. wagf to return a iterator which is having square root of values present in the list
+# l=[25,36,49,81,9,16]?
+
+l=[25,36,49,81,9,16]
+from math import sqrt
+def value(l):
+    for i in l:
+        # return(sqrt(i))
+        print(sqrt(i))
+print(value(l))
+
+                                                        # OR
+
+l=[25,36,49,81,9,16]
+from math import sqrt
+def value(l):
+    for i in l:
+        yield(sqrt(i))
+print(list(value(l)))
+
+# 4. wagf to return a iterator having tuples of word and its len pair and typecast into dictionary
+# l=["instagram","facebook","whatsapp","meta","oracle"]
+
+l=["instagram", "facebook","whatsapp","meta", "oracle"]
+def value(l):
+    lst=[]
+    for i in l:
+        lst.append((i, len(i)))
+    return lst
+print(value(l))
+print(dict(value(l)))
+
+                                       # OR
+
+l=["instagram", "facebook","whatsapp","meta", "oracle"]
+def value(l):
+   for i in l:
+       yield i, len(i)
+print(list(value(l)))
+print(dict(value(l)))
+
+# 5. wagf to generate only numeric values in given list
+# l=["flipcart","Amazon",78,[2,3,4],78,9.87,(5,3),45.36]?
+
+l=["flipkart", "amazon", 78,[2,3,4],78,9.87,(5,3),45.36]
+def value(l):
+    for i in l:
+        if isinstance(i,(int, float)):
+            # return i
+         print(i)
+value(l)
+
+                                                # OR
+
+l=["flipkart", "amazon", 78,[2,3,4],78,9.87,(5,3),45.36]
+def value(l):
+    for i in l:
+        if isinstance(i, (float, int)):
+            yield i
+print(list(value(l)))
+print(list(value(l)))
+
+# 6. wagf to generate a list if it is individual datatype reverse it else return as it is
+# l=["flipcart","Amazon",78,[2,3,4],78,9.87,(5,3),45.36]?
+
+l=["flipkart", "amazon", 78,[2,3,4],78,9.87,(5,3),45.36]
+def value(l):
+    for i in l:
+        if isinstance(i,(float,int,complex,bool)):
+            # i1=i[::-1]
+            # return i1
+            print(str(i)[::-1])
+        else:
+             print(i)
+value(l)
+
+                                                       # OR
+
+l=["flipkart", "amazon", 78,[2,3,4],78,9.87,(5,3),45.36]
+def value(l):
+    for i in l:
+        if isinstance(i, (float, int, complex, bool)):
+            x=str(i)[::-1]
+            yield x
+        else:
+            yield i
+        print(i)
+print(list(value(l)))
+
+
+# 7. wagf to generate only the string with odd length in given list
+# l=["alexa","siri","google","cortrena"]?
+
+l=["alexa","siri","google","cortrena"]
+def value(l):
+    for i in l:
+        if len(i)%2==1:
+            print(i)
+value(l)
+
+                                                         # OR
+
+l=["alexa","siri","google","cortrena"]
+def value(l):
+    for i in l:
+        if len(i)%2==1:
+            yield i
+print(list(value(l)))
+
+# 8. wagf to create a list of numbers if number are even square it else cube it
+# l=[2,3,4,5,6,7]?
+
+l=[2,3,4,5,6,7]
+def value(l):
+    for i in l:
+        lst=[]
+        if i%2==0:
+            i=i**2
+            print(i)
+        else:
+            i=i**3
+            print(i)
+value(l)
+
+                                          # OR
+
+l=[2,3,4,5,6,7]
+def value(l):
+    for i in l:
+
+        if i%2==0:
+            i=i**2
+            yield i
+        else:
+            i=i**3
+            yield i
+print(list(value(l)))
+
+# 9. wagf to return a list if words is of even length reverse it
+# l=["hello","world","python","apple","google","walmart"]?
+
+l=["hello","world","python","apple","google","walmart"]
+def value(l):
+    for i in l:
+        if len(i)%2==0:
+            print(i[::-1])
+value(l)
+
+                                                      # OR
+
+l=["hello","world","python","apple","google","walmart"]
+def value(l):
+    for i in l:
+        if len(i)%2==0:
+            i=i[::-1]
+            yield i
+print(list(value(l)))
+
+# 10. wagf to generate the first letter of the word as key and words starting with letter
+# as value
+# s="python is a programming language and programming is part of life"?
+
+s="python is a programming language and programming is part of life"
+def value(s):
+    dict={}
+    for i in s.split():
+        f=i[0]
+        if f in dict:
+            dict[f].append(i)
+        else:
+            dict[f]=[i]
+    print(dict)
+print(value(s))
+
+                                                      # OR
+
+s="python is a programming language and programming is part of life"
+def value(s):
+    dict={}
+    for i in s.split():
+        f=i[0]
+        if f in dict:
+            dict[f].append(i)
+        else:
+            dict[f]=[i]
+    yield dict
+print(list(value(s)))
+
+
+
+# 11. wap to fetch all the inteiger value from the list using generator?
+# l=['hi', True, 2+2j, 99, 11,0.2]
+# o/p=> [99,11]
+
+l=['hi', True, 2+2j, 99, 11,0.2]
+def sample():
+    for i in l:
+        if type(i)==int:
+          yield i
+print(list(sample()))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
